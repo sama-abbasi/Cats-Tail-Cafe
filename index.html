@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style--index.css" />
+    <script src="js--index.js" defer></script>
+    <title>Cat's Tail Café</title>
+    <link rel="shortcut icon" href="pointer/paw---icon-top.png" type="" />
+  </head>
+  <body>
+    <nav class="nav-font">
+      <div class="nav-logo">
+        <img
+          src="logo/logo.png"
+          alt="Cat's Tail café logo"
+          style="height: 6rem; filter: saturate(90%)"
+        />
+      </div>
+      <!--logo-->
+      <!-- hamburger button (visible only on small screens) -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle menu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li>
+            <a href="#">HOME</a>
+          </li>
+          <li>
+            <a href="about.html">ABOUT CAFÉ</a>
+          </li>
+          <li>
+            <a href="menu.html">MENU</a>
+          </li>
+          <li>
+            <a href="#" class="smooth-scroll" data-target="#tcg">TCG LOUNGE</a>
+          </li>
+          <li>
+            <a href="#" class="smooth-scroll" data-target="#event-gallery"
+              >EVENTS</a
+            >
+          </li>
+          <li>
+            <a href="gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="#contact" class="smooth-scroll" data-target="#footer"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+        <!--nav-->
+
+        <a href="reservation.html" class="btn-base btn-reserve"
+          >RESERVE A TABLE</a
+        >
+        <!--reservation-->
+      </div>
+    </nav>
+
+    <!--  -->
+    <main>
+      <!--hero-->
+      <section class="hero-content" id="about-cafe">
+        <!--img as the background in css-->
+        <div class="hero-text">
+          <p class="hero-- nav-font">
+            <span class="hero-span">COFFEE, COMPANION &amp; CARDS</span>
+          </p>
+          <!--small text up-->
+
+          <h1 class="hero-- heading-font">WELCOME TO <br />CAT'S TAIL CAFÉ</h1>
+          <!--welcome text-->
+
+          <div class="hero-btn-txt-container">
+            <p class="hero-- hero-p">
+              A cozy fantasy-inspired café where travelers gather for
+              handcrafted drinks, delicious treats, and exciting TCG matches.
+            </p>
+            <!--small text down-->
+            <div class="hero-btn-container">
+              <a href="menu.html" class="hero-btn-left hero-btn btn-base">
+                VIEW OUR MENU
+              </a>
+              <!--left-->
+              <a
+                href="#event-gallery"
+                class="smooth-scroll hero-btn-right hero-btn btn-base-lined"
+                data-target="#event-gallery"
+                >TCG EVENTS</a
+              ><!--right-->
+            </div>
+          </div>
+          <!--boxs-->
+        </div>
+      </section>
+
+      <!--absolute box-->
+      <section class="abs-container" id="menu">
+        <div class="abs--">
+          <img
+            src="icon/cup-icon-removebg.png"
+            alt="cup-icon"
+            class="abs-icons"
+            style="height: 70px; width: 70px"
+          />
+          <h4>HANDCRAFTED DRINKS</h4>
+          <p>Made with premium blends and a touch of magic.</p>
+
+          <!--texts-->
+        </div>
+        <div class="abs-line"></div>
+        <div class="abs--">
+          <img
+            src="icon/cake-icon-removebg.png"
+            alt="cake-icon"
+            class="abs-icons"
+            style="height: 70px; width: 70px"
+          />
+          <h4>DELICIOUS TREATS</h4>
+          <p>
+            Freshly baked pastries and desserts to satisfy every adventurer.
+          </p>
+        </div>
+        <div class="abs-line"></div>
+        <div class="abs--">
+          <img
+            src="icon/cards-icon-removebg.png"
+            alt="cards-icon"
+            class="abs-icons"
+            style="height: 70px; width: 70px"
+          />
+          <h4>TCG LOUNGE</h4>
+          <p>Challenge friends, join tournaments, and climb the leaderboard.</p>
+        </div>
+        <div class="abs-line"></div>
+        <div class="abs--">
+          <img
+            src="icon/community-icon-removebg.png"
+            alt="community-icon"
+            class="abs-icons"
+            style="height: 70px; width: 70px"
+          />
+          <h4>WELCOMING COMMUNITY</h4>
+          <p>A place for everyone to relax, connect, and make memories.</p>
+        </div>
+      </section>
+
+      <!--featured menu-->
+      <!--add the menu page later-->
+      <section class="featured-container" id="featured">
+        <div class="featured-header">
+          <h2 class="heading-font">FEATURED MENU</h2>
+          <a href="menu.html" class="btn">VIEW FULL MENU</a>
+        </div>
+
+        <img
+          src="line/line-removebg-colored.png"
+          alt="decorative line"
+          style="height: 10px; margin-bottom: 1rem"
+        />
+        <!-- line -->
+
+        <div class="featured-slider">
+          <button
+            class="featured-slider-btn featured-prev"
+            aria-label="Previous"
+          >
+            &#10094;
+          </button>
+
+          <div class="featured-viewport">
+            <div class="featured-track" id="featuredTrack">
+              <article class="menu-card">
+                <img src="food/udon-noodles.png" alt="Udon Noodles" />
+                <h4>Udon Noodles</h4>
+                <span>$6.50</span>
+                <p>Thick, chewy noodles served in a warm, savory broth.</p>
+              </article>
+
+              <article class="menu-card">
+                <img
+                  src="food/northern-smoked-chicken.png"
+                  alt="Northern Smoked Chicken"
+                />
+                <h4>Northern Smoked Chicken</h4>
+                <span>$8.00</span>
+                <p>
+                  Slow-smoked chicken with a deep, smoky aroma and tender meat.
+                </p>
+              </article>
+
+              <article class="menu-card">
+                <img
+                  src="food/flaming-red-bolognese.png"
+                  alt="Flaming Red Bolognese"
+                />
+                <h4>Flaming Red Bolognese</h4>
+                <span>$7.75</span>
+                <p>A bold, spiced pasta sauce simmered low and slow.</p>
+              </article>
+
+              <article class="menu-card">
+                <img
+                  src="food/black-back-perch-stew.png"
+                  alt="Black-Back Perch Stew"
+                />
+                <h4>Black-Back Perch Stew</h4>
+                <span>$9.25</span>
+                <p>A rich fish stew with a deep, hearty broth.</p>
+              </article>
+
+              <article class="menu-card">
+                <img
+                  src="food/bamboo-shoot-soup.png"
+                  alt="Slow Cooked Bamboo Shoot Soup"
+                />
+                <h4>Bamboo Shoot Soup</h4>
+                <span>$6.25</span>
+                <p>A gentle, slow-simmered soup with tender bamboo shoots.</p>
+              </article>
+
+              <article class="menu-card">
+                <img src="food/tahchin.png" alt="Tahchin" />
+                <h4>Tahchin</h4>
+                <span>$7.00</span>
+                <p>Golden saffron rice cake layered with tender chicken.</p>
+              </article>
+
+              <article class="menu-card">
+                <img src="food/potato-boat.png" alt="Potato Boat" />
+                <h4>Potato Boat</h4>
+                <span>$5.75</span>
+                <p>Baked potato filled with a savory, cheesy topping.</p>
+              </article>
+
+              <article class="menu-card">
+                <img src="food/sabz-meat-stew.png" alt="Sabz Meat Stew" />
+                <h4>Sabz Meat Stew</h4>
+                <span>$8.50</span>
+                <p>Herb-braised meat stew with a fragrant, earthy depth.</p>
+              </article>
+
+              <article class="menu-card">
+                <img src="food/lasagna.png" alt="Lasagna" />
+                <h4>Lasagna</h4>
+                <span>$8.25</span>
+                <p>Layers of pasta, rich sauce, and melted cheese.</p>
+              </article>
+            </div>
+          </div>
+
+          <button class="featured-slider-btn featured-next" aria-label="Next">
+            &#10095;
+          </button>
+        </div>
+
+        <div class="featured-dots" id="featuredDots"></div>
+      </section>
+
+      <!--tcg-->
+      <section class="tcg-container" id="tcg">
+        <div class="tcg-container--left">
+          <div class="tcg-txt-container">
+            <p>TCG LOUNGE</p>
+            <h2 class="heading-font">PLAY. COMPETE. CONNECT.</h2>
+            <p>
+              Our TCG Lounge is the heart of the action.
+              <br />
+              Join casual games, learn, compete in tournaments, and become a
+              legend.
+            </p>
+          </div>
+          <!--texts-->
+          <div class="tcg-board-container">
+            <div class="tcg-board-texts">
+              <img
+                src="icon/tcg-icons----1removebg.png"
+                alt="tcg-icon-1"
+                style="height: 2rem; filter: opacity(80%) saturate(80%)"
+              />
+              <p>Open Play</p>
+              <small>Every day</small>
+            </div>
+            <div class="tcg-board-spacer"></div>
+
+            <div class="tcg-board-texts">
+              <img
+                src="icon/tcg-icons----2removebg.png"
+                alt="tcg-icon-1"
+                style="height: 2rem; filter: opacity(80%) saturate(80%)"
+              />
+              <p>Tournaments</p>
+              <small>Weekly events</small>
+            </div>
+            <div class="tcg-board-spacer"></div>
+
+            <div class="tcg-board-texts">
+              <img
+                src="icon/tcg-icons----3removebg.png"
+                alt="tcg-icon-2"
+                style="height: 2rem; filter: opacity(80%) saturate(80%)"
+              />
+              <p>Learn to Play</p>
+              <small>New players welcome</small>
+            </div>
+            <div class="tcg-board-spacer"></div>
+
+            <div class="tcg-board-texts">
+              <img
+                src="icon/tcg-icons----4removebg.png"
+                alt="tcg-icon-3"
+                style="height: 2rem; filter: opacity(80%) saturate(80%)"
+              />
+              <p>Leaderboard</p>
+              <small>Track your rank</small>
+            </div>
+          </div>
+          <!--icons-->
+          <div class="tcg-btn-container">
+            <a href="tcg-how.html" class="btn-base">LEARN MORE</a>
+            <a href="reservation.html" class="btn-base-lined">JOIN NOW</a>
+          </div>
+        </div>
+        <div class="tcg-img-container">
+          <img
+            src="img/tcg-img.png"
+            alt="tcg-img"
+            style="max-height: 100%; width: 100%"
+          />
+        </div>
+      </section>
+
+      <!--events+gallery-->
+      <section class="event-gallery-container" id="event-gallery">
+        <div class="event-container">
+          <div class="event-header">
+            <h2 class="heading-font">UPCOMING EVENTS</h2>
+          </div>
+
+          <div class="event-article-container">
+            <div class="event-art--date">
+              <img
+                src="date/dates-all__1.png"
+                alt="events-date"
+                style="height: 55px; width: 55px"
+              />
+
+              <img
+                src="date/dates-all__2.png"
+                alt="events-date"
+                style="height: 55px; width: 55px"
+              />
+
+              <img
+                src="date/dates-all__3.png"
+                alt="events-date"
+                style="height: 55px; width: 55px"
+              />
+            </div>
+            <div class="event-art--txt">
+              <article class="event-card">
+                <div class="event-card-txt">
+                  <span>Friday Night Casual</span>
+                  <small>May 24, 2026 ᛫ 6:00 PM</small>
+                  <small>Casual matches and friendly games!</small>
+                </div>
+              </article>
+
+              <div class="event-card-spliter"></div>
+
+              <article class="event-card">
+                <div class="event-card-txt">
+                  <span>TCG Tournament</span>
+                  <small>May 25, 2026 ᛫ 6:00 PM</small>
+                  <small>Compete for glory and prizes!</small>
+                </div>
+              </article>
+
+              <div class="event-card-spliter"></div>
+
+              <article class="event-card">
+                <div class="event-card-txt">
+                  <span>Cosplay Day</span>
+                  <small>June 1, 2026 ᛫ 4:00 PM</small>
+                  <small>Dress up and enjoy special treats!</small>
+                </div>
+              </article>
+
+              <div class="event-card-spliter"></div>
+              <a href="#event-gallery" class="btn-base-lined"
+                >VIEW ALL EVENTS</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--left-->
+
+        <div class="event-gallery-spliter"></div>
+        <!-- spliter -->
+
+        <div class="gallery-container">
+          <div class="gallery-txt">
+            <div class="gallery-header">
+              <h2 class="heading-font">A PLACE FOR EVERY ADVENTURER</h2>
+              <div>
+                <p>Whether you're here for a quiet coffee,</p>
+                <p>epic card battle, or a sweet treat,</p>
+                <p>Cat's Tail café is your home away from home.</p>
+              </div>
+            </div>
+          </div>
+          <!--text-->
+          <a href="about.html" class="btn-base-lined">ABOUT OUR CAFÉ</a
+          ><!--go to gallery-->
+          <div class="gallery-img-container">
+            <img
+              src="gallery/gallery--1.png"
+              alt="gallery-img"
+              style="height: 7rem"
+            />
+            <img
+              src="gallery/gallery--2.png"
+              alt="gallery-img"
+              style="height: 7rem"
+            />
+            <img
+              src="gallery/gallery--3.png"
+              alt="gallery-img"
+              style="height: 7rem"
+            />
+          </div>
+          <!--photos-->
+        </div>
+        <!--right-->
+      </section>
+
+      <!--ratings-->
+      <section class="rating-container">
+        <h3 class="heading-font">WHAT OUR GUESTS SAY</h3>
+        <img
+          src="line/line-removebg-colored.png"
+          alt="decorative line"
+          style="height: 10px; margin-bottom: 0.5rem"
+        />
+
+        <!--  -->
+        <div class="rate-art-container">
+          <button class="slider-btn prev-btn" aria-label="Previous">
+            &#10094;
+          </button>
+
+          <div class="viewport">
+            <div class="testimonial-track">
+              <article class="testimonials">
+                <div class="tests-upper">
+                  <p class="stars">★★★★★</p>
+                  <p>
+                    "Best café in town! The drinks are amazing and the TCG
+                    community is so welcoming."
+                  </p>
+                </div>
+                <div class="tests-lower">
+                  <img
+                    src="char/character-profiles__1.png"
+                    alt="profile-picture"
+                    class="avatar"
+                  />
+                  <p>- Anonymous</p>
+                </div>
+              </article>
+
+              <article class="testimonials">
+                <div class="tests-upper">
+                  <p class="stars">★★★★★</p>
+                  <p>"Love the cozy atmosphere and the weekly tournaments!"</p>
+                </div>
+                <div class="tests-lower">
+                  <img
+                    src="char/character-profiles__2.png"
+                    alt="profile-picture"
+                    class="avatar"
+                  />
+                  <p>- Anonymous</p>
+                </div>
+              </article>
+
+              <article class="testimonials">
+                <div class="tests-upper">
+                  <p class="stars">★★★★★</p>
+                  <p>"The desserts are to die for! My new favourite spot."</p>
+                </div>
+                <div class="tests-lower">
+                  <img
+                    src="char/character-profiles__3.png"
+                    alt="profile-picture"
+                    class="avatar"
+                  />
+                  <p>- Anonymous</p>
+                </div>
+              </article>
+
+              <article class="testimonials">
+                <div class="tests-upper">
+                  <p class="stars">★★★★★</p>
+                  <p>
+                    "Friendly staff, great coffee, and a cat at the counter.
+                    What more could you want?"
+                  </p>
+                </div>
+                <div class="tests-lower">
+                  <img
+                    src="char/character-profiles__4.png"
+                    alt="profile-picture"
+                    class="avatar"
+                  />
+                  <p>- Anonymous</p>
+                </div>
+              </article>
+
+              <article class="testimonials">
+                <div class="tests-upper">
+                  <p class="stars">★★★★★</p>
+                  <p>
+                    "The perfect place to learn the card game and make new
+                    friends."
+                  </p>
+                </div>
+                <div class="tests-lower">
+                  <img
+                    src="char/character-profiles__5.png"
+                    alt="profile-picture"
+                    class="avatar"
+                  />
+                  <p>- Anonymous</p>
+                </div>
+              </article>
+
+              <article class="testimonials">
+                <div class="tests-upper">
+                  <p class="stars">★★★★★</p>
+                  <p>
+                    "Warm, cozy, and full of character. I keep coming back."
+                  </p>
+                </div>
+                <div class="tests-lower">
+                  <img
+                    src="char/character-profiles__6.png"
+                    alt="profile-picture"
+                    class="avatar"
+                  />
+                  <p>- Anonymous</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!--sliders-->
+          <button class="slider-btn next-btn" aria-label="Next">
+            &#10095;
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer--up" id="footer">
+        <div class="f-up--logos foot-up--box">
+          <img
+            src="logo/logo.png"
+            alt="Cat's Tail café logo"
+            style="height: 6rem; width: 6rem; filter: saturate(90%)"
+          />
+
+          <div>
+            <div class="f-logos--text">
+              <p>Coffee, Companions &amp; Cards.</p>
+              <p>We can't wait to welcome you!</p>
+            </div>
+            <div class="social-m--container">
+              <div>
+                <img
+                  src="icon/instagram.png"
+                  alt="socialmedia-"
+                  style="
+                    height: 1rem;
+                    filter: opacity(80%);
+                    background-color: transparent;
+                  "
+                />
+              </div>
+              <div>
+                <img
+                  src="icon/facebook.png"
+                  alt="socialmedia-"
+                  style="
+                    height: 1rem;
+                    filter: opacity(80%);
+                    background-color: transparent;
+                  "
+                />
+              </div>
+              <div>
+                <img
+                  src="icon/icons8-x-50.png"
+                  alt="socialmedia-"
+                  style="
+                    height: 1rem;
+                    filter: opacity(80%);
+                    background-color: transparent;
+                  "
+                />
+              </div>
+              <div>
+                <a
+                  href=""
+                  target="_blank"
+                  style="
+                    text-decoration: none;
+                    background-color: transparent;
+                    height: 16px;
+                  "
+                >
+                  <img
+                    src="icon/linkedin.png"
+                    alt="socialmedia-"
+                    style="
+                      height: 1rem;
+                      filter: opacity(80%);
+                      background-color: transparent;
+                    "
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- logo -->
+
+          <!-- app links -->
+        </div>
+        <!--bla bla-->
+        <div class="foot-up--box">
+          <h5>QUICK LINKS</h5>
+          <ul>
+            <li>
+              <a href="about.html"> About Café </a>
+            </li>
+            <li>
+              <a href="menu.html"> Menu </a>
+            </li>
+            <li>
+              <a href="tcg-how.html"> TCG Lounge </a>
+            </li>
+            <li>
+              <a
+                href="#event-gallery"
+                class="smooth-scroll"
+                data-target="#event-gallery"
+              >
+                Events
+              </a>
+            </li>
+            <li>
+              <a href="gallery.html"> Gallery </a>
+            </li>
+            <li>
+              <a href="#footer" class="smooth-scroll" data-target="#footer">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <!--quick links-->
+        </div>
+        <div class="foot-up--box">
+          <h5>VISIT US</h5>
+          <div class="visit-container">
+            <div>
+              <img
+                src="icon/icon--location.png"
+                alt="location"
+                style="
+                  height: 1rem;
+                  width: 1rem;
+                  filter: opacity(70%);
+
+                  margin: 0 0.5rem 0.5rem 0;
+                "
+              />
+              <img
+                src="icon/icon--phone.png"
+                alt="phone"
+                style="
+                  height: 1rem;
+                  width: 1rem;
+                  filter: opacity(70%);
+                  margin: 0 0.5rem 0.5rem 0;
+                "
+              />
+              <img
+                src="icon/icon--mail.png"
+                alt="mail"
+                style="
+                  height: 1rem;
+                  width: 1rem;
+                  filter: opacity(70%);
+
+                  margin: 0 0.5rem 0.5rem 0;
+                "
+              />
+              <img
+                src="icon/icon--calendar.png"
+                alt="calendar"
+                style="
+                  height: 1rem;
+                  width: 1rem;
+                  filter: opacity(70%);
+                  margin: 0 0.5rem 0.5rem 0;
+                "
+              />
+            </div>
+            <div class="visit-text">
+              <address>
+                <small> 123 Adeventure Road, Mondstadt, Teyvat </small>
+              </address>
+              <a href="tel:+1234567890">(123) 456-7890</a>
+              <a href="mailto:info@cattailcafe.com">info@cattailcafe.com</a>
+              <small>
+                Mon - Fri: 8:00 AM - 10:00 PM
+                <br />
+                Sat - Sun: 9:00 AM - 11:00 PM
+              </small>
+            </div>
+          </div>
+        </div>
+        <!--visit us-->
+        <div class="foot-up--box foot--map">
+          <img
+            src="img/cat-tail--map.png"
+            alt="map"
+            style="
+              max-width: 20rem;
+              border-radius: 0.5rem;
+              margin-bottom: 0.5rem;
+              filter: opacity(90%);
+            "
+          />
+          <a href="direction.html" class="btn-base-lined" target="_blank">
+            GET DIRECTIONS
+          </a>
+        </div>
+        <!--map-->
+      </div>
+      <!--upper-->
+      <hr />
+      <div class="foot-down--box">
+        <p>&copy; Cat's Tail Café All rights reserved.</p>
+        <p>
+          Fan project, inspired by Genshin Impact, Cat's Tail — not affiliated
+          with or endorsed by HoYoverse. Not a real business!
+        </p>
+      </div>
+      <!--lower-->
+    </footer>
+
+    <!-- back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polyline points="6 15 12 9 18 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- notif -->
+    <div class="notif-overlay" id="notifOverlay">
+      <div class="notif-box">
+        <div class="sparkle sparkle-1"></div>
+        <div class="sparkle sparkle-2"></div>
+        <div class="sparkle sparkle-3"></div>
+        <div class="sparkle sparkle-4"></div>
+        <div class="sparkle sparkle-5"></div>
+
+        <button class="notif-close" id="notifClose">&times;</button>
+
+        <img
+          src="logo/logo.png"
+          alt="Cat's Tail café logo"
+          class="notif-logo"
+        />
+        <h3 class="heading-font">READ THE STORY!</h3>
+        <p>
+          If you're curious about how and why I ended up making this website,
+          read the story!
+        </p>
+        <a href="about.html" class="btn-base notif-btn">READ STORY</a>
+      </div>
+    </div>
+  </body>
+</html>

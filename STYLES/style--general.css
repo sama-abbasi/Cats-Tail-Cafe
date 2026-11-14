@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Card Titles */
+
+:root {
+  --color-bg-cream: #f8f3ec;
+  --color-text-dark: #2a211c;
+  --color-text-muted: #6e645c;
+  --color-accent-gold: #d8a24c;
+  --color-accent-gold-light: #ecb04a;
+  --color-accent-wine: #8c3a3a;
+  --color-accent-wine-hover: #6f2c2c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+  cursor: url("/pointer/paw-pointer--og--cropped--20px.png"), auto;
+}
+
+body {
+  padding: 0 6rem;
+  background-color: #171007;
+}

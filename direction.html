@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato";
+        cursor: url("/pointer/paw-pointer-smaller.png"), auto;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden; /* no scrolling */
+      }
+
+      body {
+        background-color: #2a211c;
+        color: #fff9f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem; /* breathing room on small screens */
+      }
+      main {
+        width: 100%;
+      }
+
+      p {
+        font-size: clamp(1rem, 4vw, 1.75rem); /* responsive text size */
+      }
+
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        text-decoration: none;
+        color: #fff9f2;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>Let's play together!</p>
+    </main>
+    <script>
+      setTimeout(() => {
+        window.location.href =
+          "https://genshin.hoyoverse.com/ua/pc-landing/?utm_source=EU_google_DE_search_240618newlp&hoyotrace_channel=ga_channel&new=1&gad_source=1&gad_campaignid=20050783087&gbraid=0AAAAADEnd4BZHfAyC4Fq9sooS6uIf039k&gclid=CjwKCAjwvZHTBhAlEiwA1ug5P41MBLwqAcVK9LyOPfps71Ay3U0OCYTdWv8sGxAZ0vKGfq9a1OZy5RoCoWMQAvD_BwE";
+      }, 3000); // 3 second delay
+    </script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="STYLES/style--index.css" />
+    <link rel="stylesheet" href="STYLES/style--reserve.css" />
+    <script src="JS/js--reserve.js" defer></script>
+    <title>Reserve a Table | Cat's Tail Café</title>
+    <link rel="shortcut icon" href="pointer/paw---icon-top.png" type="" />
+  </head>
+  <body>
+    <!-- NAV (same as index.html; links that pointed to sections now go to index.html#...) -->
+    <nav class="nav-font">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img
+            src="logo/logo.png"
+            alt="Cat's Tail café logo"
+            style="height: 6rem; filter: saturate(90%)"
+          />
+        </a>
+      </div>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle menu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT CAFÉ</a></li>
+          <li><a href="menu.html">MENU</a></li>
+          <li><a href="index.html#tcg">TCG LOUNGE</a></li>
+          <li><a href="index.html#event-gallery">EVENTS</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+
+        <a
+          href="reservation.html"
+          class="btn-base btn-reserve"
+          aria-current="page"
+          >RESERVE A TABLE</a
+        >
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO + FORM -->
+      <section class="res-hero">
+        <div class="res-hero-bg" aria-hidden="true"></div>
+
+        <div class="res-title">
+          <p class="res-eyebrow nav-font">
+            GOOD FOOD &middot; GREAT COMPANY &middot; TCG VIBES
+          </p>
+          <h1 class="heading-font">Reserve a Table</h1>
+          <p class="res-sub">Find your spot at Cat's Tail Café</p>
+          <div class="res-divider" aria-hidden="true">
+            <span></span>
+            <img
+              src="icon/paw-img--ylw-removedbg.png"
+              alt="paw"
+              style="opacity: 80%"
+            />
+            <span></span>
+          </div>
+        </div>
+
+        <div class="res-card">
+          <header class="res-card-head">
+            <img src="logo/logo.png" alt="" class="res-card-logo" />
+            <h2 class="heading-font">Make a Reservation</h2>
+            <p>
+              Good food, cozy atmosphere, and a place<br />
+              for your favorite people (and maybe a cat).
+            </p>
+          </header>
+
+          <form id="reservationForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="date">Date</label>
+                <div class="input-wrap">
+                  <svg
+                    class="field-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="5" width="18" height="16" rx="2" />
+                    <path d="M3 10h18M8 3v4M16 3v4" />
+                  </svg>
+                  <input type="date" id="date" name="date" required />
+                </div>
+                <p class="field-error" id="err-date" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="time">Time</label>
+                <div class="input-wrap">
+                  <svg
+                    class="field-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                  <select id="time" name="time" required disabled>
+                    <option value="">Select date first</option>
+                  </select>
+                </div>
+                <p class="field-error" id="err-time" role="alert"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="party">Party Size</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="9" cy="8" r="3.5" />
+                  <path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6" />
+                  <path
+                    d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5c2 .7 3.5 2.6 3.5 5.5"
+                  />
+                </svg>
+                <select id="party" name="party">
+                  <option value="1">1 person</option>
+                  <option value="2" selected>2 people</option>
+                  <option value="3">3 people</option>
+                  <option value="4">4 people</option>
+                  <option value="5">5 people</option>
+                  <option value="6">6 people</option>
+                  <option value="7">7 people</option>
+                  <option value="8">8 people</option>
+                  <option value="9">9 people</option>
+                  <option value="10">10 people</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="name">Your Name</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" />
+                </svg>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <p class="field-error" id="err-name" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
+                  />
+                </svg>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. +98 912 345 6789"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+              <p class="field-error" id="err-phone" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="notes">Special Requests (optional)</label>
+              <div class="input-wrap textarea-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 5h16v11H9l-5 4V5z" />
+                </svg>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="e.g. Window seat, high chair, etc."
+                ></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="res-submit">
+              Confirm Reservation
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </form>
+
+          <!-- shown after a successful submit -->
+          <div class="res-success" id="resSuccess" hidden>
+            <svg class="res-check" viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="26" cy="26" r="24" />
+              <path d="M15 27l8 8 15-17" />
+            </svg>
+            <h2 class="heading-font">Table Reserved!</h2>
+            <p id="successText"></p>
+            <button type="button" class="res-submit res-again" id="resAgain">
+              Make Another Reservation
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="res-features">
+        <div class="res-feature">
+          <img src="icon/cup-icon-removebg.png" alt="" />
+          <h4>Great Coffee</h4>
+          <p>Specialty drinks &amp; more</p>
+        </div>
+        <div class="res-feature">
+          <img src="icon/cake-icon-removebg.png" alt="" />
+          <h4>Delicious Food</h4>
+          <p>From light bites to full meals</p>
+        </div>
+        <div class="res-feature">
+          <img src="icon/cards-icon-removebg.png" alt="" />
+          <h4>TCG Lounge</h4>
+          <p>Play, trade, make friends</p>
+        </div>
+        <div class="res-feature">
+          <img src="icon/cat-icon--removedbg.png" alt="" />
+          <h4>Cat Friendly</h4>
+          <p>Real cats, real vibes</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="res-footer" id="footer">
+      <a href="index.html" class="res-footer-logo">
+        <img src="logo/logo.png" alt="Cat's Tail café logo" />
+      </a>
+
+      <p class="res-footer-tag">
+        <span></span>Coffee, Companion &amp; Cards<span></span>
+      </p>
+
+      <div class="res-footer-social">
+        <a href="#" aria-label="Instagram"
+          ><img src="icon/instagram.png" alt=""
+        /></a>
+        <a href="#" aria-label="Facebook"
+          ><img src="icon/facebook.png" alt=""
+        /></a>
+        <a href="#" aria-label="X"><img src="icon/icons8-x-50.png" alt="" /></a>
+        <a href="#" aria-label="LinkedIn"
+          ><img src="icon/linkedin.png" alt=""
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>
